@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Billslate — Security Incident Response Policy</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<h1>Security Incident Response Policy</h1>
+<p class="updated">Last updated: September 29, 2026</p>
+
+<p>This policy describes how Billslate (operated by Gaku Labs) responds to security incidents that may affect customer data.</p>
+
+<h2>How the app is built</h2>
+<p>Billslate runs entirely on Atlassian Forge. It has no servers of its own and does not send data outside Atlassian's infrastructure. It stores only the data described in the <a href="privacy.html">Privacy Policy</a>, in Atlassian's hosted storage for Forge apps.</p>
+
+<h2>1. Detection</h2>
+<p>The developer monitors the app's logs and errors in the Atlassian developer console, and reviews reports from customers and from Atlassian.</p>
+
+<h2>2. Containment</h2>
+<ul>
+<li>Revoke or rotate any compromised credentials of the developer's Atlassian account.</li>
+<li>Deploy a fix, or disable the affected feature, as quickly as possible.</li>
+<li>Preserve relevant logs for investigation.</li>
+</ul>
+
+<h2>3. Assessment</h2>
+<p>The developer investigates which data may have been exposed, which sites are affected, and the root cause.</p>
+
+<h2>4. Notification</h2>
+<p>Affected customers are notified by email as soon as practical, and no later than 72 hours after an incident is confirmed. Atlassian is notified through its partner channels where required. The notification explains what happened, what data was affected, what has been done, and what customers should do, if anything.</p>
+
+<h2>5. Remediation</h2>
+<p>The underlying cause is fixed and verified before the affected feature is restored.</p>
+
+<h2>6. Post-incident review</h2>
+<p>After resolution, the incident is documented: timeline, root cause, impact, and changes to prevent it from happening again.</p>
+
+<h2>Reporting a security issue</h2>
+<p>Contact <a href="mailto:gaku.labs@gmail.com">gaku.labs@gmail.com</a>.</p>
+
+<footer>Billslate by Gaku Labs · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer>
+</main>
+</body>
+</html>
