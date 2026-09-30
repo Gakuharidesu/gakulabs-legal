@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Billslate for Jira — Documentation</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<h1>Billslate for Jira</h1>
+<p class="updated">Documentation · Last updated: September 30, 2026</p>
+
+<p>Billslate turns the time your team already logs in Jira into costs. Set an hourly rate for each person, add budgets for projects or epics, and see what has been spent, what is left and where each budget is heading. Export every worklog with its rate and amount as a CSV for invoicing.</p>
+<p>Billslate doesn't record time itself. It uses Jira's built-in worklogs, so your team keeps logging time the way they do today.</p>
+
+<h2>1. Install and first import</h2>
+<ol>
+<li>Install Billslate from the Atlassian Marketplace.</li>
+<li>Open <strong>Apps → Billslate</strong> in Jira. Billslate imports your existing worklogs in the background. On a large site this can take a few minutes; click <strong>Refresh</strong> to see progress.</li>
+<li>After that, new, changed and deleted worklogs are picked up automatically. Click <strong>Sync now</strong> any time to run a full check.</li>
+</ol>
+
+<h2>2. Set the currency and hourly rates</h2>
+<p>Only Jira admins can change these. Go to <strong>Jira settings → Apps → Billslate settings</strong>.</p>
+<ul>
+<li><strong>Currency</strong> — choose the currency for rates and amounts. It can only be changed while no rates are set.</li>
+<li><strong>Hourly rates</strong> — everyone who has logged work is listed. Enter a rate and the date it starts. To change a rate later, add a rate change with a new start date: work before that date keeps the old rate, so past amounts never change.</li>
+</ul>
+<p>Time logged by someone without a rate is shown separately as "without a rate" and isn't included in amounts until a rate is set.</p>
+
+<h2>3. Choose who can see amounts</h2>
+<p>Rates, costs and budgets are sensitive. Jira admins can always see them. In <strong>Billslate settings → Who can see amounts</strong>, add the groups that should see them too, such as finance or project managers. Everyone else sees a message that they don't have access. The check is made on the server, so amounts are never sent to people who can't see them.</p>
+
+<h2>4. Add budgets</h2>
+<ol>
+<li>On the Billslate page, click <strong>Add budget</strong>.</li>
+<li>Choose a project or an epic. An epic's budget includes its stories and subtasks.</li>
+<li>Enter the amount, and optionally a start and end date. Work outside those dates isn't counted.</li>
+</ol>
+<p>Each budget shows the amount spent, the percentage used and a forecast. The forecast adds the remaining estimate of the work items in the budget, priced at the budget's average cost per hour so far. Budgets at 80% or more, or forecast to go over, are marked <strong>Watch</strong>; budgets at 100% or more are marked <strong>Over budget</strong> and listed first.</p>
+
+<h2>5. See cost over time</h2>
+<p>The <strong>Cost over time</strong> chart shows costs by month (the last 12 months) or by year. Choose all work, a project or an epic.</p>
+
+<h2>6. Export for invoicing</h2>
+<p>In <strong>Export for invoicing</strong>, choose a project or an epic and an optional period, then click <strong>Download CSV</strong>. The file has one row per worklog — date, work item, summary, person, hours, hourly rate and amount — and a total row. It opens directly in Excel. Each row's amount is rounded on its own, and the total is the sum of the rows, so the file always adds up.</p>
+
+<h2>Languages</h2>
+<p>Billslate is available in English and Japanese, and follows each person's Jira language setting.</p>
+
+<h2>Frequently asked questions</h2>
+<p><strong>Does Billslate work with time tracking apps like Tempo?</strong><br>Billslate reads Jira's built-in worklogs. Apps that store time in Jira's worklogs are supported; apps that keep time in their own storage are not.</p>
+<p><strong>Where is our data stored?</strong><br>Billslate runs entirely on Atlassian Forge. Data stays in Atlassian's infrastructure and is never sent elsewhere. See the <a href="privacy.html">Privacy Policy</a>.</p>
+<p><strong>Why does a budget's total differ slightly from the CSV total?</strong><br>The budget rounds each person's total once, while the CSV rounds each row so the file adds up. The difference is at most a few units of the currency.</p>
+
+<h2>Support</h2>
+<p>Email <a href="mailto:gaku.labs@gmail.com">gaku.labs@gmail.com</a>. We usually reply within two business days.</p>
+
+<footer>Billslate by Gaku Labs · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="security.html">Security</a></footer>
+</main>
+</body>
+</html>
